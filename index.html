@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+      <meta http-equiv="Pragma" content="no-cache" />
+      <meta http-equiv="Expires" content="0" />
+      <link href="index.css" rel="stylesheet">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <script src="index.js"></script>
+      <title>L-System Generator</title>
+   </head>
+   <body>
+      <div class="page">
+         <div class="banner">
+            <div class="spinner"></div>
+            <div class="aborted">Aborted!</div>
+            <h2>L-System Generator</h2>
+         </div>
+         <div class="content">
+            <div class="menu-area">
+               <label>Saved systems</label>
+               <select id="saved"></select>
+
+               <label>Name</label>
+               <input type="text" class="txtin" id="name">
+
+               <label>Axiom</label>
+               <input type="text" class="txtin" id="axiom">
+
+               <label>Draw symbols</label>
+               <input type="text" class="txtin" id="draw">
+
+               <label>Line segment length</label>
+               <input type="text" class="txtin" id="length">
+
+               <label>Angle</label>
+               <input type="text" class="txtin" id="angle">
+
+               <label>Production rules</label>
+               <input type="text" class="txtin" id="rule1" placeholder="rule 1">
+               <input type="text" class="txtin" id="rule2" placeholder="rule 2">
+               <input type="text" class="txtin" id="rule3" placeholder="rule 3">
+               <input type="text" class="txtin" id="rule4" placeholder="rule 4">
+               <input type="text" class="txtin" id="rule5" placeholder="rule 5">
+
+               <label>Iterations <span id="stepct"></span></label>
+               <input type="range" id="steps" min="1" max="12" value="3">
+
+               <div class="button"><button id="save">Save</button></div>
+            </div>
+            <div class="content-area">
+               <svg id="svg1" height="1000" width="1000" viewBox="0 0 1000 1000"></svg>
+            </div>
+            <div id="info">-info-</div>
+            <div id="info-popup">
+               <pre>
+To get an understanding of L-Systems, see
+<a href="https://en.wikipedia.org/wiki/L-system" target="_blank">https://en.wikipedia.org/wiki/L-system</a>
+
+The production rules:
+   +  ....... Increase the angle
+   -  ....... Decrease the angle
+   |  ....... Flip angle 180'
+   &gt; ........ Increase the angle by 90'
+   &lt; ........ Decrease the angle by 90'
+   [  ....... Push pos and angle on the stack
+   ]  ....... Pop pos and angle from the stack
+   .  ....... Move without drawing
+
+               </pre>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>

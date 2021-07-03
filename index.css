@@ -1,0 +1,131 @@
+
+body{
+   margin: 0;
+   padding: 0;
+/*   text-align: center; */
+   font-family: Verdana, Arial, Sans-serif;
+}
+
+.page {
+   display: flex;
+   flex-direction: column;
+   position: fixed;
+   top   : 0;
+   bottom: 0;
+   left  : 0;
+   right : 0;
+}
+
+.banner {
+   height: 80px;
+   text-align: center;
+   background-color: #EEF;
+}
+
+.content {
+   display: flex;
+   flex: 1;
+}
+
+.menu-area {
+   flex: 0 0 15em;
+   background-color: #EEF;
+   padding: 1em;
+}
+
+.menu-area label {
+   margin-top: 0.5em;
+   display: block;
+}
+
+.pos {
+   width: 44%;
+}
+
+
+
+.txtin, select {
+   width: 90%;
+   margin-bottom: 0.5em;
+   padding: 0.25em 0.5em;
+}
+
+select {
+   width: 97%;
+}
+
+input[type="range"] {
+   width: 96%;
+}
+
+.content-area {
+   flex: 3;
+   height: calc(100vh - 80px);
+   background-color: #EEF;
+}
+
+svg{
+   height: 98%; 
+   width: auto;
+   margin-bottom: 1em;
+   background-color: white;
+}
+
+.button {
+   text-align: center;
+}
+
+#save {
+   padding: .4em 1em;
+   margin: 1em;
+}
+
+.spinner {
+   display: inline-block;
+   position: absolute;
+   top: 70px;
+   left: 9em;
+   width: 50px;
+   height: 50px;
+   border: 6px solid rgba(220,220,220,0.35);
+   border-top: 6px solid #3498db;
+   border-radius: 50%;
+   margin: -50px;
+   animation: spin .7s linear infinite;
+   background-clip: content-box;
+   z-index: 99;
+}
+
+@keyframes spin {
+  0%   {transform: rotate(0deg)  }
+  100% {transform: rotate(360deg)}
+}
+
+.aborted {
+   position: absolute;
+   top: 50px;
+   left: 6em;
+   font-weight: bold;
+}
+
+#info {
+   position: absolute;
+   display: inline-block;
+   cursor: pointer;
+   right: 10px;
+   top: 10px;
+}
+
+#info-popup {
+   display: none;
+   position: absolute;
+   top: 100px;
+   left: 10em;
+   width: 21em;
+   height: 14em;
+   font-size: 1.75em;
+   border: 4px solid light gray;
+   padding: 1em;
+   background: #EEF;
+}
+
