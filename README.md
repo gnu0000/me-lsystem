@@ -1,4 +1,5 @@
 # me-lsystem
-L-System generator
 
-https://craig-fitzgerald.com/
+A Lindenmayer system using SVG. No libraries or frameworks.
+
+https://craig-fitzgerald.com/toys/lsystem/
